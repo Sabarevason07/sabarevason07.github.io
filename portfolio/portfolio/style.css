@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;1,200&family=Montserrat&family=Oswald&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    height: 100%;
+}
+
+.hero {
+    background-color: #fffefe;
+    overflow-x: hidden;
+}
+
+header {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    padding: 20px 20px 20px 20px;
+    align-items: center;
+    background-color: rgb(211, 209, 209);
+    color: #fffefe;
+    opacity: 0.9;
+    position: fixed;
+    z-index: 2;
+    border-bottom: 2px solid #ff3f05;
+}
+
+header .logo a {
+    color: rgb(14, 14, 14);
+    text-decoration: none;
+    font-size: 35px;
+}
+
+.nav {
+    text-align: center;
+    height: 45px;
+    z-index: 2;
+
+}
+
+label img {
+    height: 50px;
+    display: none;
+}
+
+label {
+    text-align: right;
+}
+
+.menu {
+    width: 100%;
+}
+
+.menu a {
+    font-size: 177px;
+    text-decoration: none;
+    color: black;
+    border-right: 2px solid #EAEAEB;
+    padding: 110px 2px 0px 15px;
+}
+
+.menu a span {
+    text-decoration: underline;
+    color: #000fdf;
+}
+
+#toggle {
+    display: none;
+}
+
+.home {
+    padding-top: 100px;
+    padding-bottom: 30px;
+    height: 100%;
+    align-items: center;
+    font-size: 10px;
+    z-index: 1;
+}
+
+.home .link {
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+
+.home .link .line img {
+    width: 80px;
+    height: 20px;
+}
+
+.home .link .icon {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home .link .icon img {
+    height: 25px;
+    padding-left: 20px;
+}
+
+.home .name {
+    font-size: 30px;
+    padding: 30px 30px 0px 30px;
+}
+
+.home .name span {
+    color: #ff9900;
+}
+
+.aboutme {
+    padding: 0px 20px 20px 20px;
+}
+
+.aboutme .mypic {
+    text-align: center;
+}
+
+.aboutme .mypic img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    padding-bottom: 20px;
+    border-radius: 250px;
+}
+
+@media only screen and (max-width: 500px) {
+    .nav {
+        text-align: right;
+        height: 35px;
+        z-index: 2;
+    }
+    label img {
+        display: block;
+        height: 40px;
+    }
+    label {
+        float: right;
+    }
+   
+
+    .menu a span {
+      
+        color: #1aace5;
+    }
+    #toggle {
+        display: none;
+    }
+    label {
+        cursor: pointer;
+    }
+    #toggle:checked+.menu {
+        display: block;
+    }
+}
+
+.aboutmeinfo p {
+    padding-top: 10px;
+    color: gray;
+}
+
+.btn {
+    margin: 20px 30px 10px 0px;
+    width: 160px;
+    height: 37px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 0.625em;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn a {
+    text-decoration: none;
+    color: white;
+}
+
+button a:hover {
+    color: #fee000;
+}
+
+button:after {
+    content: "";
+    background: rgb(222, 38, 38);
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+}
+
+button:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+
+.Skills {
+    margin: 20px 20px 10px 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+.Skills h2 {
+    padding-bottom: 20px;
+}
+
+.Skills .SkillsInfo p {
+    padding-bottom: 20px;
+    color: gray;
+}
+
+.Skills .SkillsInfo span {
+    color: black;
+}
+
+.Skills .Slist {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Skills .Slist p {
+    padding: 20px;
+}
+
+.Skills .Slist img {
+    height: 65px;
+}
+
+.Project {
+    margin: 80px 20px 10px 20px;
+}
+
+.Project h2 
+{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.Project p {
+    color: gray;
+}
+
+.Project span {
+    color: black;
+}
+
+.Project .border {
+    border: thick double gray;
+    text-align: center;
+}
+
+.Project .border a,
+.Project .border p {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    padding: 0px 10px 0px 10px;
+}
+
+
+.Project .border .PLP {
+    width: 100%;
+    zoom: 80%;
+    object-fit: cover;
+    padding: 10px 20px 10px 20px;
+}
+
+.Hline {
+    margin: 80px 30px 30px 30px;
+    border: 1px solid black;
+    background-color: black;
+}
+
+.Contact {
+    background-color: #eeecec;
+    padding: 60px 20px 45px 20px;
+    text-align: center;
+}
+
+.Contact .Contactinfo {
+    padding: 20px 20px 20px 20px;
+    color: gray;
+}
+
+.Contact .Contactinfo h2 {
+    color: black;
+    text-decoration: underline #dacc67;
+}
+
+.Contact .Contactinfo .email {
+    padding-top: 20px;
+}
+
+.Contact .Contactinfo .email a {
+    font-size: 22px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+.Contact .Contactinfo .email a:hover {
+    border-bottom: none;
+}
+
+footer {
+    padding: 0px 20px 20px 20px;
+    align-items: center;
+}
+
+footer .F_right {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .F_right a {
+    text-decoration: none;
+    color: gray;
+}
+
+footer .F_left {
+    padding-bottom: 15px;
+}
+
+footer .F_left a {
+    text-decoration: none;
+}
+
+footer .F_left h5 {
+    color: black;
+}
+
+footer .F_left p {
+    color: gray;
+}
+
+footer .F_right a:hover {
+    text-decoration: underline black;
+}
+
+@media only screen and (min-width: 566px) {
+    .aboutme .mypic img {
+        max-width: 90%;
+        height: 90%;
+        object-fit: cover;
+        padding: 0px 20px 0px 0px;
+    }
+    .home .name {
+        font-size: 23px;
+    }
+    .hero {
+        font-size: 20px;
+    }
+    .home .link .line img {
+        width: 90px;
+        height: 20px;
+    }
+    .btn {
+        font-size: 23px;
+        width: 190px;
+        height: 42px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .Project .Projectlist {
+        display: flex;
+        justify-content: space-between;
+    }
+    .Project .border {
+        border: thick double gray;
+        text-align: center;
+        width: 48%;
+    }
+}
+
+@media only screen and (min-width: 666px) {
+    .aboutme .mypic img {
+        width: 90%;
+        height: 90%;
+        object-fit: cover;
+        padding: 10px 20px 10px 20px;
+    }
+    .home .name {
+        font-size: 26px;
+    }
+    .hero {
+        font-size: 23px;
+    }
+    .home .link .line img {
+        width: 100px;
+        height: 20px;
+    }
+    .btn {
+        font: 26px;
+        width: 220px;
+        height: 47px;
+    }
+}
+
+@media only screen and (min-width: 735px) {
+    .aboutme .mypic img {
+        width: 90%;
+        height: 90%;
+        object-fit: cover;
+        padding: 10px 20px 10px 20px;
+    }
+    .home .name {
+        font-size: 29px;
+    }
+    .home .link .line img {
+        width: 150px;
+        height: 20px;
+    }
+    .btn {
+        font-size: 29px;
+        width: 250px;
+        height: 52px;
+    }
+}
+
+@media only screen and (min-width: 811px) {
+    .aboutme .mypic img {
+        width: 90%;
+        height: 90%;
+        object-fit: cover;
+        padding: 10px 20px 10px 20px;
+    }
+    .home .name {
+        font-size: 32px;
+    }
+    .home .link .line img {
+        width: 200px;
+        height: 20px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .menu a {
+        font-size: 22px;
+        text-decoration: none;
+        color: black;
+        border-right: 2px solid #EAEAEB;
+        padding-left: 15px;
+        padding: 0px 2px 0px 15px;
+    }
+    .aboutme .mypic img {
+        width: 90%;
+        height: 90%;
+        object-fit: cover;
+        padding: 10px 20px 10px 20px;
+    }
+    .hero {
+        font-size: 23px;
+    }
+    .home .name {
+        font-size: 45px;
+        ;
+    }
+    .home,
+    .aboutme,
+    .Skills,
+    .Project,
+    .Hline,
+    .Contact,
+    footer {
+        margin: 100px 50px 0px 50px;
+    }
+    .Skills {
+        padding-top: 20px;
+        padding-bottom: 150px;
+    }
+    .Hline {
+        margin-top: 100px;
+    }
+    footer {
+        display: flex;
+        justify-content: space-between;
+    }
+    footer .F_right {
+        display: flex;
+    }
+    footer .F_right a {
+        padding-left: 20px;
+    }
+    .home .link .line img {
+        width: 250px;
+        height: 20px;
+    }
+    .aboutme {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .aboutme .aboutmeinfo {
+        width: 50%;
+        padding-top: 85px;
+    }
+    .aboutme .mypic img {
+        width: 90%;
+        height: 90%;
+        object-fit: cover;
+    }
+}
